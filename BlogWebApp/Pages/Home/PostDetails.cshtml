@@ -1,0 +1,45 @@
+﻿@page
+@model BlogWebApp.Pages.Home.PostDetailsModel
+@{
+}
+
+<div class="container">
+<div class="row pb-3">
+	
+	<div class="row g-0 bg-light position-relative" style="border:1px solid #055cba; border-radius: 5px;">
+		<div class="col-md-3 mb-md-0 p-md-4">
+			<img src="@Model.PostVM.Post.ImageUrl" class="card-img-top rounded" width="150" height="200">
+			
+				@if (User.IsInRole(Blog.Utility.WebSiteRole.Role_User_Indi))
+				{
+					<div class="mt-5 ml-5">
+					<a asp-page="/comment/Create" class="btn btn-primary " asp-route-postId="@Model.PostVM.Post.Id">
+						Add Comment
+					</a>
+					</div>
+				}
+			
+		</div>
+		<div class="col-md-6 p-4 ps-md-0">
+
+			<h2 class="card-title mt-0 mb-2 text-primary"><b>@Model.PostVM.Post.Title </b></h2>
+			<p class="card-title mt-0">posted by <b>@Model.PostVM.Post.ApplicationUser.FullName </b></p>
+			<p class="card-title mt-0">Created at <b>@Model.PostVM.Post.CreationTime.ToShortDateString()</b></p>
+				<div class="text-info">
+				<p class="card-text  text-primary "> @Html.Raw(@Model.PostVM.Post.Body)</p>
+				</div
+				<p> Comments:</p>
+			@foreach (var comment in @Model.PostVM.CommentList)
+			{
+					<div class="border rounded-2 m-3">
+						<div class="text-primary ml-4 "> @Html.Raw(@comment.Body) </div>
+						<div class="mt-0 ml-4"> Written by <b> @comment.ApplicationUser.FullName </b> on <b>@comment.CreationTime.ToShortDateString() </b></div>
+					</div>
+			}
+		</div>
+	</div>
+		
+
+</div>
+	
+</div>

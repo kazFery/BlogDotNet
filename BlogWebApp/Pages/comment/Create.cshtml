@@ -1,0 +1,44 @@
+﻿@page
+@model BlogWebApp.Pages.comment.CreateModel
+@{
+}
+<form method="post" enctype="multipart/form-data">
+	<div class="row">
+		<div class="col-10 m1-2">
+			<div class="border p-3 mt-4 row">
+				<div class="col-12 pb-2">
+					<h2 class="text-primary">Add New Comment </h2>
+
+					<hr />
+				</div>
+			</div>
+		</div>
+		<div class="mb-3">
+			
+			<label asp-for="Comment.Body"></label>
+			<textarea asp-for="Comment.Body" rows="3" class="form-control"></textarea>
+			<span asp-validation-for="Comment.Body" class="text-danger"></span>
+			<input asp-for="Comment.CreationTime" value="@DateTime.Now" type="hidden" class="form-control" />
+			<button type="submit" class="btn btn-primary" style="width:150px">Add</button>
+				
+				<a asp-page="/Home/Index" class="btn btn-secondary" style="width:150px">
+					Back to List
+				</a>
+		</div>
+	</div>
+	
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+	<script>
+		tinymce.init({
+			selector: 'textarea',
+			plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+			toolbar_mode: 'floating',
+		});
+		
+	</script>
+}

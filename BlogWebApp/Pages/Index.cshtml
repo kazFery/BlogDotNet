@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<partial name="_Notification" />
+<div class="container p-3">
+
+
+<div class="row pt-4">
+    <div class="col-12">
+            <h1 class="display-4">Welcome to Nature Blog</h1>
+    </div>
+    <div class="col-6">
+
+    </div>
+    <div class="row pb-3">
+	@foreach (var post in Model.posts)
+	{
+		<div class="row g-0 bg-light position-relative" style="border:1px solid #055cba; border-radius: 5px;">
+			<div class="col-md-3 mb-md-0 p-md-4">
+				<img src="@post.ImageUrl" class="card-img-top rounded" width="150" height="200">
+			</div>
+			<div class="col-md-6 p-4 ps-md-0">
+				<h2 class="card-title mt-0 mb-2 text-primary"><b>@post.Title </b></h2>
+				<p class="card-title mt-0" >posted by <b>@post.ApplicationUser.FullName </b></p>
+				<p class="card-title mt-0">Created at <b>@post.CreationTime.ToShortDateString()</b></p>
+				<p class="card-text "> @Html.Raw(@post.Body)</p>
+				<div class="d-flex nav-justified">
+					<a asp-page="/Home/PostDetails" class="btn btn-info  w-25 me-5  form-control" asp-route-postId="@post.Id">
+						Comments
+					</a>
+				  @if (User.IsInRole(Blog.Utility.WebSiteRole.Role_User_Indi) || User.IsInRole(Blog.Utility.WebSiteRole.Role_Admin)  )
+				   {
+					<a asp-page="/comment/Create" class="btn btn-primary w-25  form-control" asp-route-postId="@post.Id">
+							Add Comment
+						</a>
+				   }
+						</div>
+			</div>
+		</div>
+		}
+		</div>
+    
+   
+</div>
+</div>
+

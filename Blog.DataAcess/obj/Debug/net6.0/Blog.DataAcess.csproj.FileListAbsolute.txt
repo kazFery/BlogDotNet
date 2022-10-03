@@ -1,0 +1,17 @@
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.csproj.AssemblyReference.cache
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.AssemblyInfoInputs.cache
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.AssemblyInfo.cs
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.csproj.CoreCompileInputs.cache
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\bin\Debug\net6.0\Blog.DataAcess.deps.json
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\bin\Debug\net6.0\Blog.DataAcess.runtimeconfig.json
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\bin\Debug\net6.0\Blog.DataAcess.dll
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\bin\Debug\net6.0\Blog.DataAcess.pdb
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\bin\Debug\net6.0\Blog.Models.dll
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\bin\Debug\net6.0\Blog.Models.pdb
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.csproj.CopyComplete
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.dll
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\refint\Blog.DataAcess.dll
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.pdb
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\Blog.DataAcess.genruntimeconfig.cache
+C:\Users\kazem\Documents\netProject\DotNetWebApp\Blog.DataAcess\obj\Debug\net6.0\ref\Blog.DataAcess.dll

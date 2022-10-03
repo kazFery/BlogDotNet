@@ -1,0 +1,68 @@
+﻿@page
+@model BlogWebApp.Pages.Home.IndexModel
+@{
+}
+<partial name="_Notification" />
+
+<div class="row pb-3">
+	@foreach (var post in Model.posts)
+	{
+		<div class="row g-0 bg-light position-relative" style="border:1px solid #055cba; border-radius: 5px;">
+			<div class="col-md-3 mb-md-0 p-md-4">
+				<img src="@post.ImageUrl" class="card-img-top rounded" width="150" height="200">
+			</div>
+			<div class="col-md-6 p-4 ps-md-0">
+				<h2 class="card-title mt-0 mb-2 text-primary"><b>@post.Title </b></h2>
+				<p class="card-title mt-0" >posted by <b>@post.ApplicationUser.FullName </b></p>
+				<p class="card-title mt-0">Created at <b>@post.CreationTime.ToShortDateString()</b></p>
+				<p class="card-text "> @Html.Raw(@post.Body)</p>
+				<div class="d-flex nav-justified">
+					<a asp-page="/Home/PostDetails" class="btn btn-info  w-25 me-5  form-control" asp-route-postId="@post.Id">
+						Comments
+					</a>
+					@if (User.IsInRole(Blog.Utility.WebSiteRole.Role_User_Indi) || User.IsInRole(Blog.Utility.WebSiteRole.Role_Admin))
+					{
+						<a asp-page="/comment/Create" class="btn btn-primary w-25  form-control" asp-route-postId="@post.Id">
+							Add Comment
+						</a>
+					}
+						
+						</div>
+			</div>
+		</div>
+
+
+
+
+		@*<div class="col-lg-3 col-md-6">
+			<div class="row p-2">
+				<div class="col-12 p-1" style="border:1px solid #008cba; border-radius: 5px;">
+					<div class="card">
+						<p class="card-title h3 text-primary text-center">@post.Title</p>
+						<img src="@post.ImageUrl" class="card-img-top rounded" width="300" height="200" />
+
+						<div class="card-body">
+							<div class="pl-1">
+								
+								<p class="card-title"> posted by <b>@post.ApplicationUser.FullName <b> </p>
+								<p class="card-title text-info">Created at <b>@post.CreationTime</b></p>
+								<p class="card-text "> @Html.Raw(@post.Body)</p>
+							</div>
+							
+						</div>
+					</div>
+					<div class="row p-2">
+
+						<a asp-page="/comment/Create" class="card-link col-6 btn btn-primary form-control" asp-route-postId="@post.Id">
+							Add Comment
+						</a>
+						<a asp-page="/comment/Index" class="card-link col-6 btn btn-primary form-control" asp-route-postId="@post.Id">
+							More
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>*@
+	}
+</div>
