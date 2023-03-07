@@ -17,3 +17,4 @@ Project is created with:
 * Entity Freamwork
 * Bootstrap
 * MVC
+* MySQL
